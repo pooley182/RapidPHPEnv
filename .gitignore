@@ -1,5 +1,1 @@
 
-frontend/public/css/*.css
-frontend/public/js/*.js
-vendor/*
-core/datamodel/generated-*/*
