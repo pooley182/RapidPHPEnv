@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="loneworker" defaultIdMethod="native" identifierQuoting="true">
+	<!-- <table name="host" phpName="Host">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+		<column name="short_name" type="varchar" size="256" required="true" />
+		<column name="domain" type="varchar" size="1024"/>
+		<column name="ip_address" type="varchar" size="15" />
+		<column name="active" type="boolean" />
+	</table>
+	<table name="test_type" phpName="TestType">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+		<column name="name" type="varchar" size="128" required="true"/>
+	</table>
+	<table name="test" isCrossRef="true" phpName="Test">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="host_id" type="integer" required="true" />
+		<column name="test_type_id" type="integer" required="true" />
+		<column name="active" type="boolean" />
+		<column name="parent" type="integer" />
+		<column name="continue_on_fail" type="boolean" />
+		<column name="fail_count" type="integer" />
+		<foreign-key foreignTable="host">
+			<reference local="host_id" foreign="id"/>
+		</foreign-key>
+		<foreign-key foreignTable="test_type">
+			<reference local="test_type_id" foreign="id"/>
+		</foreign-key>
+		<behavior name="archivable" />
+	</table>
+	<table name="testvalue" phpName="TestValue">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="test_id" type="integer" required="true" />
+		<foreign-key foreignTable="test">
+			<reference local="test_id" foreign="id"/>
+		</foreign-key>
+		<column name="value" type="varchar" size="256" required="true" />
+		<column name="order" type="integer" />
+	</table>
+	<table name="failure" phpName="Failure">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="test_id" type="integer" required="true" />
+		<column name="silenced_by" type="integer" />
+		<column name="alert_sent" type="integer" />
+		<foreign-key foreignTable="test">
+			<reference local="test_id" foreign="id"/>
+		</foreign-key>
+		<foreign-key foreignTable="user">
+			<reference local="silenced_by" foreign="id"/>
+		</foreign-key>
+		<column name="time_down" type="timestamp" required="true" />
+		<column name="time_up" type="timestamp" />
+	</table>
+	<table name="comment" phpName="Comment">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="failure_id" type="integer" required="true" />
+		<column name="user_id" type="integer" required="true" />
+		<foreign-key foreignTable="failure">
+			<reference local="failure_id" foreign="id"/>
+		</foreign-key>
+		<foreign-key foreignTable="user">
+			<reference local="user_id" foreign="id"/>
+		</foreign-key>
+		<column name="comment" type="longvarchar" />
+	</table>
+	<table name="user" phpName="User">
+		<column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+		<column name="username" type="varchar" size="256" required="true" />
+		<column name="first_name" type="varchar" size="256" />
+		<column name="last_name" type="varchar" size="256" />
+		<column name="email_address" type="varchar" size="256" required="true" />
+		<column name="password" type="varchar" size="256" required="true" />
+		<column name="mobile_number" type="varchar" size="256" required="true" />
+		<column name="pushover_token" type="varchar" size="256" required="true" />
+		<column name="alert_interval" type="integer" />
+	</table> -->
+</database>

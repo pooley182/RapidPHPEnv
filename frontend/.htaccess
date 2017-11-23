@@ -1,0 +1,22 @@
+<IfModule mod_rewrite.c>
+	Options +FollowSymLinks
+	RewriteEngine on
+
+	# Send request via dispatch process
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^(.*)$ core/dispatch.php/$1 [L]
+</IfModule>
+
+<IfModule mod_php5.c>
+	php_value short_open_tag 0
+</IfModule>
+
+<IfModule mod_php7.c>
+	php_value short_open_tag 0
+</IfModule>
+
+AddType application/x-font-ttf           ttc ttf
+AddType application/x-font-otf           otf
+AddType application/font-woff            woff
+AddType application/font-woff2           woff2
+AddType application/vnd.ms-fontobject    eot
